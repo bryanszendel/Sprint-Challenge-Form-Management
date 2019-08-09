@@ -15,7 +15,6 @@ class UserList extends React.Component {
     axios
       .get('http://localhost:5000/api/restricted/data')
       .then(res => {
-        console.log(res.data)
         this.setState({
           items: res.data
         })
@@ -25,12 +24,11 @@ class UserList extends React.Component {
   }
 
   render() {
-    console.log('state', this.state.items)
     return (
       <div className="items-container">
         <h1>Items</h1>
         {this.state.items.map((user) => {
-          return <p key={user.name}>{user.name}</p>
+          return <p key={user.name} data-testid="items">{user.name}</p>
         })}
       </div>
     )

@@ -54,7 +54,6 @@ const UserForm = ({ errors, touched, values, status }) => {
       axios
         .post('http://localhost:5000/api/register', values)
         .then(res => {
-          console.log(res.data)
           setStatus(res.data)
         })
         .catch(err => console.log(err.response))
