@@ -4,6 +4,7 @@ import { render, fireEvent } from '@testing-library/react'
 import '@testing-library/react/cleanup-after-each'
 
 import UserList from './UserList'
+import axios from 'axios';
 
 it('renders without crashing', () => {
   render(<App />);
@@ -46,11 +47,12 @@ describe('<App />', () => {
     const comp = render(
         <UserList  items={itemData} />
     )
-
-    jest.runAllTimers()
-    comp.update()
     
-    const items = comp.getAllByTestId('items')
-    expect(items).toHaveLength(itemData.length)
+    function callback(itemData) {
+      const items = comp.getAllByTestId('items')
+      expect(items).toHaveLength(itemData.length) 
+      done(); 
+    }
+    axios.get('http://localhost:5000/api/restricted/data')
   })
 })
