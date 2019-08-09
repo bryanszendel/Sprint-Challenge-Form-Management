@@ -24,46 +24,70 @@ In the challenge for this Sprint, you will demonstrate proficiency by creating a
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What are the required parts of class components?
+- [X] What are the required parts of class components?
 
-- [ ] Name at least three lifecycle methods?
+class COMPONENT extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      something: '';
+    }
+  }
+  render() {
+    return(
+      <div></div>
+    )
+  }
+}
 
-- [ ] Why are forms used so often in web applications and software?
+export default COMPONENT;
 
-- [ ] What advantages are there by using a forms library like Formik?
+- [X] Name at least three lifecycle methods?
 
-- [ ] Why do we write tests for our apps?
+componentDidMount(), componentDidUpdate(), componentDidUnmount()
+
+- [X] Why are forms used so often in web applications and software?
+
+Forms are the most common way of gather user input and interactions. Oftentimes, it is the primary method for users to interact with a web application.
+
+- [X] What advantages are there by using a forms library like Formik?
+
+Formik manages state, onChange, and onSubmit for us. It streamlines the tasks that need to completed on each form regardless.
+
+- [X] Why do we write tests for our apps?
+
+Tests for our apps are written to ensure that we can catch bugs prior to deployment. If we can catch bugs before they leave the development phase, then we can ensure a better experience for our users and ourselves by not having to deal with as buggy production software.
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add PM as collaborator on Github.
-- [ ] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
-- [ ] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add PM as collaborator on Github.
+- [X] Clone your OWN version of Repo. **(Not Lambda's by mistake!)**
+- [X] Create a new Branch locally: `git checkout -b <firstName-lastName>`.
 
-- [ ] Implement the project on this Branch, **committing progress & changes often.**
-- [ ] Push commits: `git push origin <firstName-lastName>`.
-- [ ] Navigate to the BE folder in this repository (this is where your server is located) from the command line, install the dependencies, and run `yarn start` or `npm start` to spin up the server provided for you.
-- [ ] In the terminal, navigate back to the main folder, then into the `client` folder.
-- [ ] Create your React app here.
+- [X] Implement the project on this Branch, **committing progress & changes often.**
+- [X] Push commits: `git push origin <firstName-lastName>`.
+- [X] Navigate to the BE folder in this repository (this is where your server is located) from the command line, install the dependencies, and run `yarn start` or `npm start` to spin up the server provided for you.
+- [X] In the terminal, navigate back to the main folder, then into the `client` folder.
+- [X] Create your React app here.
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request.
-- [ ] PM then will count the HW as done by merging the branch back into master.
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
+- [X] Add your Project Manager as a Reviewer on the Pull-request.
+- [X] PM then will count the HW as done by merging the branch back into master.
 
 ## Minimum Viable Product
 
 Your finished project must include all of the following requirements:
 
-- [ ] A registration form built with formik - include inputs for a `username` and a `password`
-- [ ] Form validation using Yup
-- [ ] At least one class component (I would challenge you to make the form a class!)
+- [X] A registration form built with formik - include inputs for a `username` and a `password`
+- [X] Form validation using Yup
+- [X] At least one class component (I would challenge you to make the form a class!)
 - [ ] Tests for at least one element, one event, and one unit test for a function
-- [ ] A POST request made from the registration form to `http://localhost:5000/api/register` to add a user - the request body should have the following shape:
+- [X] A POST request made from the registration form to `http://localhost:5000/api/register` to add a user - the request body should have the following shape:
 
 ```js
 {
@@ -82,9 +106,9 @@ and the response object will look like this:
 }
 ```
 
-- [ ] A GET request made to `http://localhost:5000/api/restricted/data` to retrieve the data
+- [X] A GET request made to `http://localhost:5000/api/restricted/data` to retrieve the data
 
-- [ ] Map over the array of objects you recieve and render some or all of it's information to the DOM.
+- [X] Map over the array of objects you recieve and render some or all of it's information to the DOM.
 
 ## Stretch Problems
 

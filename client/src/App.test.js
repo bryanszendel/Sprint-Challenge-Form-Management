@@ -46,6 +46,10 @@ describe('<App />', () => {
     const comp = render(
         <UserList  items={itemData} />
     )
+
+    jest.runAllTimers()
+    comp.update()
+    
     const items = comp.getAllByTestId('items')
     expect(items).toHaveLength(itemData.length)
   })
