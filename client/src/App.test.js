@@ -38,12 +38,14 @@ describe('<App />', () => {
   //function
   it('<UserList /> should render food items', () => {
     const itemData = [
-      {name: 'brisket'},
-      {name: 'ham'},
-      {name: 'hush puppies'}
+      {id: 1, name: 'brisket'},
+      {id: 2, name: 'ham'},
+      {id: 3, name: 'hush puppies'}
     ]
     
-    const comp = render(<UserList items={itemData} />)
+    const comp = render(
+        <UserList  items={itemData} />
+    )
     const items = comp.getAllByTestId('items')
     expect(items).toHaveLength(itemData.length)
   })
