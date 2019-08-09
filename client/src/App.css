@@ -1,0 +1,32 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center;
+  width: 100%;
+  margin: 0 auto; */
+}
+
+.form-container, .items-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0;
+}
+
+.items-container p {
+  margin: 5px 0;
+}
+
+.userform {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  justify-content: center;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
+}
