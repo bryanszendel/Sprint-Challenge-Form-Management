@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
 
 const UserForm = ({ errors, touched, values, status }) => {
+
+  const [user, setUser] = useState([])
+  useEffect(() => {
+    if (status) {
+      setUser(user => status)
+    }
+  }, [status])
 
     return (
       <div className="form-container">
@@ -22,6 +29,9 @@ const UserForm = ({ errors, touched, values, status }) => {
 
           <button type="submit">Submit</button>
         </Form>
+        <div>
+          {user.message}
+        </div>
       </div>
     )
   }
@@ -45,6 +55,7 @@ const UserForm = ({ errors, touched, values, status }) => {
         .post('http://localhost:5000/api/register', values)
         .then(res => {
           console.log(res.data)
+          setStatus(res.data)
         })
         .catch(err => console.log(err.response))
     }

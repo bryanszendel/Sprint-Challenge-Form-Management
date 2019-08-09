@@ -27,7 +27,8 @@ class UserList extends React.Component {
   render() {
     console.log('state', this.state.items)
     return (
-      <div>
+      <div className="items-container">
+        <h1>Items</h1>
         {this.state.items.map((user) => {
           return <p key={user.name}>{user.name}</p>
         })}
